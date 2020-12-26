@@ -1,0 +1,8 @@
+# 필요없는 폴더 또는 파일의 확장자 등을 여기에 적는다.( 파일 필터링 )
+.settings/
+.metadata/
+build/
+
+#필요없는 파일
+.classpath
+.project
