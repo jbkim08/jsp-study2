@@ -1,22 +1,28 @@
 CREATE DATABASE IF NOT EXISTS bbs DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 use bbs;
 DROP TABLE IF EXISTS board;
-CREATE TABLE board 
-( 
-	boardID 	 INT AUTO_INCREMENT,
-    boardTitle	 VARCHAR(50),
-    boardContent VARCHAR(2048),
-    userID	 	 VARCHAR(20),
-	writeTime 	 DATETIME,
-    isAvailable	 INT1,
-    PRIMARY KEY (boardID)
+CREATE TABLE IF NOT EXISTS BBS (
+	bbsID int,
+	bbsTitle varchar(50),
+	userID varchar(20),
+	bbsDat DATETIME,
+	bbsContent varchar(2048),
+	bbsAvailable int,
+	primary key (bbsID)
 );
 
-INSERT INTO board(boardTitle, boardContent, userID, writeTime, isAvailable)
-  VALUES("안녕하세요", "처음 게시판을 만들어 봅니다.", "pengsu", now() , TRUE );
 
-SELECT * FROM board;
-DELETE FROM board;
+INSERT INTO BBS VALUES (1, '제목1', '11', '2017-08-24 16:04:01', '내용', 1);
+INSERT INTO BBS VALUES (2, '제목2', '11', '2017-08-24 16:04:05', '내용', 1);
+INSERT INTO BBS VALUES (3, '제목3', '11', '2017-08-24 16:04:07', '내용', 1);
+INSERT INTO BBS VALUES (4, '제목4', '11', '2017-08-24 16:04:09', '내용', 1);
+INSERT INTO BBS VALUES (5, '제목5', '11', '2017-08-24 16:04:11', '내용', 1);
+INSERT INTO BBS VALUES (6, '제목6', '11', '2017-08-24 16:04:21', '내용', 1);
+INSERT INTO BBS VALUES (7, '제목7', '11', '2017-08-24 16:04:31', '내용', 1);
+INSERT INTO BBS VALUES (8, '제목8', '11', '2017-08-24 16:04:41', '내용', 1);
+INSERT INTO BBS VALUES (9, '제목9', '11', '2017-08-24 16:04:51', '내용', 1);
+INSERT INTO BBS VALUES (10, '제목10', '11', '2017-08-24 16:04:55', '내용', 1);
+INSERT INTO BBS VALUES (11, '제목11', '11', '2017-08-24 16:04:57', '내용', 1);
 
 INSERT INTO `board` VALUES ('1','Gryphon, and, taking Alice by the English, who wan','Alice; \'I must be on the shingle--will you come and join the dance? Will you, won\'t you, will you join the dance. Will you, won\'t you, will you, won\'t you join the dance? \"You can really have no.','linnie41','1999-10-31 21:11:05','1'),
 ('2','King. (The jury all wrote down all three to settle','Alice angrily. \'It wasn\'t very civil of you to death.\"\' \'You are old, Father William,\' the young Crab, a little shriek and a bright brass plate with the strange creatures of her ever getting out of.','lrippin','1995-07-03 22:36:40','1'),
